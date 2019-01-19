@@ -28,9 +28,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="data\clean.py" />
+    <Compile Include="data\generateData.py" />
+    <Compile Include="data\generateModel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="objects\EntityModel.py" />
+    <Compile Include="objects\RelationModel.py" />
+    <Compile Include="objects\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebApp\__init__.py" />
     <Compile Include="FlaskWebApp\views.py" />
+    <Compile Include="tests\test_1.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FlaskWebApp\" />
@@ -39,8 +52,15 @@
     <Folder Include="FlaskWebApp\static\fonts\" />
     <Folder Include="FlaskWebApp\static\scripts\" />
     <Folder Include="FlaskWebApp\templates\" />
+    <Folder Include="data\" />
+    <Folder Include="tests\" />
+    <Folder Include="objects\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docker-compose.yml" />
+    <Content Include="Dockerfile" />
+    <Content Include="FlaskWebApp\templates\item.html" />
+    <Content Include="FlaskWebApp\templates\list.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebApp\static\content\bootstrap.css" />
     <Content Include="FlaskWebApp\static\content\bootstrap.min.css" />

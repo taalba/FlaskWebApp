@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  neo4jdb:
+    image: neo4j:latest
+    volumes:
+      - /clients/neo4j/data:/data
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    
+  flask-app:
+    build: ./
+    volumes:
+      - ./:/usr/app/src
+    ports:
+      - 5555:5555
+    links:
+    - neo4jdb:neo4j
+    depends_on:
+      - neo4jdb

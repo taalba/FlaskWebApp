@@ -61,6 +61,7 @@
     <Content Include="Dockerfile" />
     <Content Include="FlaskWebApp\templates\item.html" />
     <Content Include="FlaskWebApp\templates\list.html" />
+    <Content Include="Jenkinsfile" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebApp\static\content\bootstrap.css" />
     <Content Include="FlaskWebApp\static\content\bootstrap.min.css" />

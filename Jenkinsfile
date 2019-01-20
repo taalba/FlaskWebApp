@@ -1,10 +1,11 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Build') {
+      agent any
       steps {
         echo 'Build'
-        step([$class: 'DockerComposeBuilder', dockerComposeFile: 'FlaskWebApp/docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
+        sh 'docker --version'
       }
     }
   }

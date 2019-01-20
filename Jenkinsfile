@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         echo 'Build'
-        sh 'docker --version'
+        sh 'docker-compose FlaskWebApp/docker-compose.yml build'
       }
     }
   }
